@@ -1,0 +1,6 @@
+export const environment = {
+  production: true,
+  wsUrl: 'http://localhost:5000'
+  // wsUrl: 'http:10.10.10.27:5000'
+
+};
