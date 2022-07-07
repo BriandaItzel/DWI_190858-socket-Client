@@ -19,7 +19,7 @@ export class WebsocketService {
       this.socketStatus = true;
     })
    
-    this.socket.on('connect', () => {
+    this.socket.on('disconnect', () => {
       console.log('Desconectado del servidor');
       this.socketStatus = false;
     })
@@ -27,5 +27,8 @@ export class WebsocketService {
 
 
 
+  }
+  emit(evento: string, payload?: any, callback?: Function){
+    this.socket.emit(evento,  payload, callback);
   }
 }
